@@ -9,24 +9,29 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <title>Final Project - Elections</title>
         <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/icons.css" />
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+        <script type="text/javascript" src="js/responsive.js"></script>
     </head>
     <body>
         <header>
             <h1>e-lections</h1>
-            <nav>
+            <div class="menu_bar">
+			<a href="#" class="bt-menu"><span class="icon-menu"></span>Menu</a>
+            </div>
+            <nav id="menu">
                 <ul>
-                    <li><a href="#">Button 1</a></li>
-                    <li><a href="#">Button 2</a></li>
-                    <li><a href="#">Button 3</a></li>
-                    <li><a href="#">Button 4</a></li>
+                    <li><a href="#"><span class="icon-home"></span> Home</a></li>
+                    <li><a href="#"><span class="icon-pushpin"></span> FAQ</a></li>
+                    <li><a href="#"><span class="icon-books"></span> Documentation</a></li>
+                    <li><a href="#"><span class="icon-users"></span> About Us</a></li>
                 </ul>
                 <span>Welcome anonymous!</span>
             </nav>
-            
-        </header>
         <section class="main">
             <div class="login">
                 

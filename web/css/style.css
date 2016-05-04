@@ -40,9 +40,11 @@ header>h1{
 header>nav{
     background: #365e7f;
     width:100%;
+    display:none;
 
 }
 header>nav>ul{
+    overflow:hidden;
     list-style: none;
     margin:0;
     padding:0;
@@ -58,12 +60,12 @@ header>nav>ul>li{
 }
 header>nav>ul>li>a{
     display:block;
-    padding:0.3em 0 0.3em 0;
+    padding:0.4em 0 0.4em 0;
     text-decoration:none;
     color: white;
     font-weight:bold;
     width:100%;
-    text-align:center;
+    text-indent: 1em;
 }
 header>nav>ul>li>a:hover{
     color:#365e7f;
@@ -74,6 +76,37 @@ header>nav>span{
     margin-left:1.4em;
     margin-top: 0.3em;
 }
+.menu_bar {
+    display:block;
+    width:100%;
+    background: #365e7f;
+    font-size: 20px;
+    
+}
+.menu_bar>a{
+    display:inline-block;
+    text-decoration:none;
+    color:white;
+    font-weight: bold;
+    width:100%;
+}
+.menu_bar>a>span{
+    margin:0.1em;
+    
+}
+
+.menu_bar .bt-menu {
+    display:block;
+    padding:20px;
+    background:#2d2d2d;
+    color:#fff;
+    text-decoration:none;
+    font-weight: bold;
+    font-size:25px;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+}
 
 /* Header CSS on desktop version */
 @media only screen and (min-width: 768px){
@@ -83,28 +116,33 @@ header>nav>span{
     header>nav{    
         width:98%;
         padding-right: 2%;
+        display: inline-block;
     }
     header>nav>span{
         display:inline-block;
         margin-left: 0;
         float:right;
     }
+    
     header>nav>ul{
         width:auto;
     }
     header>nav>ul>li{
         display:inline-block;
-        padding:0.3em;
+        padding:0.4em;
         width:auto;
     }
     header>nav>ul>li>a{
         display:initial;
-        padding:0.3em;
+        padding:0.4em;
         padding-top:0.2em;
-        border-radius: 3px 3px 0 0;
         text-decoration:none;
         color: white;
         font-weight:bold;
+    }
+    
+    .menu_bar {
+	display:none;
     }
 }
 
@@ -152,6 +190,7 @@ div.login>form>.formButt:hover{
     color: #76c0ff;
 }
 
+
 /* Log In CSS on desktop version */
 @media only screen and (min-width: 768px){
     div.login{
@@ -170,6 +209,7 @@ div.login>form>.formButt:hover{
     section.main{
         padding-bottom: 3%;
     }
+    
 }
 /* Footer CSS */
 footer{
