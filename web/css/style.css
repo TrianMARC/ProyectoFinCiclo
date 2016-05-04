@@ -1,0 +1,188 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 04-may-2016, 19:56:08
+    Author     : victo
+*/
+@font-face {
+    font-family: 'Copperplate Gothic Bold';
+    src: url('../fonts/coprtg.TTF');
+}
+html {
+    font-family: 'Open Sans', sans-serif;
+}
+body{
+    margin: 0;
+    background: #2d2d2d;
+}
+section.main{
+    background: white;
+    margin:0;
+    display:inline-block;
+    width:100%;
+    padding-bottom: 0;
+    
+}
+/* Header CSS */
+header{
+    background: #76c0ff;
+    color: white;
+    display:block;
+}
+header>h1{
+    margin:0.5em 0 0.5em 1em;
+    display: inline-block;
+    font-family: 'Copperplate Gothic Bold', sans-serif;
+}
+header>nav{
+    background: #365e7f;
+    width:100%;
+
+}
+header>nav>ul{
+    list-style: none;
+    margin:0;
+    padding:0;
+    
+    display:inline-block;
+    width:100%;
+}
+header>nav>ul>li{
+    display:block;
+    width:100%;
+    padding:0.3em 0 0.3em 0;
+    
+}
+header>nav>ul>li>a{
+    display:block;
+    padding:0.3em 0 0.3em 0;
+    text-decoration:none;
+    color: white;
+    font-weight:bold;
+    width:100%;
+    text-align:center;
+}
+header>nav>ul>li>a:hover{
+    color:#365e7f;
+    background: white;
+}
+header>nav>span{
+    display:block;
+    margin-left:1.4em;
+    margin-top: 0.3em;
+}
+
+/* Header CSS on desktop version */
+@media only screen and (min-width: 768px){
+    header>nav>ul{
+        margin-left: 3em;
+    }
+    header>nav{    
+        width:98%;
+        padding-right: 2%;
+    }
+    header>nav>span{
+        display:inline-block;
+        margin-left: 0;
+        float:right;
+    }
+    header>nav>ul{
+        width:auto;
+    }
+    header>nav>ul>li{
+        display:inline-block;
+        padding:0.3em;
+        width:auto;
+    }
+    header>nav>ul>li>a{
+        display:initial;
+        padding:0.3em;
+        padding-top:0.2em;
+        border-radius: 3px 3px 0 0;
+        text-decoration:none;
+        color: white;
+        font-weight:bold;
+    }
+}
+
+/* Login CSS */
+
+div.login{
+    display:inline-block;
+    background:#dedede;
+    color: #171717;
+    width:100%;
+}
+div.login>form>label{
+    display:inline-block;
+    width: 100%;
+    margin:0;
+}
+div.login>form{
+    margin:auto;
+    text-align:center;
+    padding:3em;
+    padding-top:1em;
+}
+div.login>form>label>input[type="text"]{
+    display:inline-block;
+    margin:0.3em;
+    padding:4px;
+}
+div.login>form>.formButt{
+    display: inline-block;
+    border:none;
+    margin:0;
+    text-decoration:none;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+    background: #76c0ff;
+    color: white;
+    font-weight:bold;
+    padding: 0.5em 2em 0.5em 2em;
+    border-radius: 3px;
+    margin-top: 1.6em;
+}
+div.login>form>.formButt:hover{
+    background: white;
+    color: #76c0ff;
+}
+
+/* Log In CSS on desktop version */
+@media only screen and (min-width: 768px){
+    div.login{
+        display:block;
+        border: #A1A1A1 1px solid;
+        width:40%;
+        margin:auto;
+        margin-top: 20px;
+        border-radius: 3px;
+        height:100%;
+    }
+    div.login>form>h2{
+        margin-top:0;
+        padding-top:0.3em;
+    }
+    section.main{
+        padding-bottom: 3%;
+    }
+}
+/* Footer CSS */
+footer{
+    color:#dedede;
+    padding: 3%;
+    margin: 0;
+    width: 94%;
+    text-align:center;
+}
+/* Footer desktop version CSS */
+@media only screen and (min-width: 768px){
+   footer{
+    margin: 2% 0 0 0;
+    
+    } 
+}
