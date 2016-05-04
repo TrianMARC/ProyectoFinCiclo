@@ -32,6 +32,7 @@
                 </ul>
                 <span>Welcome anonymous!</span>
             </nav>
+        </header>
         <section class="main">
             <div class="login">
                 
