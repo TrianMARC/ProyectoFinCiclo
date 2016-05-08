@@ -24,6 +24,7 @@ public class Political_party implements Serializable, PropertyChangeListener {
     @Override
     public void propertyChange(PropertyChangeEvent pce) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
     
     
