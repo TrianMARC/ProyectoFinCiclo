@@ -23,6 +23,17 @@ public class Voter implements Serializable{
     private String Password;
     private boolean Voted;
     private PropertyChangeSupport PropertySupport;
+
+    public Voter(String DNI, String Email, String Name, String Surname, String Adress, String ZipCode, String Password, boolean Voted) {
+        this.DNI = DNI;
+        this.Email = Email;
+        this.Name = Name;
+        this.Surname = Surname;
+        this.Adress = Adress;
+        this.ZipCode = ZipCode;
+        this.Password = Password;
+        this.Voted = Voted;
+    }
     
     
     public Voter() {
