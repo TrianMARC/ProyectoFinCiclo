@@ -12,8 +12,7 @@ var contador = 1;
 function main(){
 	$('.menu_bar').click(function(){
 		// $('nav').toggle(); 
- 
-		if(contador == 1){
+		if(contador === 1){
 			$('nav').slideDown();
 			contador = 0;
 		} else {
