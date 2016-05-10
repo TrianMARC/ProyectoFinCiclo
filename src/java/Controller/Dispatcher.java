@@ -23,15 +23,16 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(name = "Dispatcher", urlPatterns = {"/Dispatcher"})
 public class Dispatcher extends HttpServlet {
-private Connection con;
+
+Connectiondb ConexBD;
 
     @Override
    public void init() throws ServletException {
        /* Establecemos la conexi?n, si no existe */
             try{
-                Connectiondb ConexBD=Connectiondb.GetConexion();  
+                ConexBD=Connectiondb.GetConexion();  
                 //ConexDB se creó en el JspInit(), luego usa aquél y no crea objeto.
-                con=ConexBD.GetCon();
+               Connection con=ConexBD.GetCon();
             }catch(ClassNotFoundException cnfe){  
                 }
             catch(SQLException sqle){
@@ -51,7 +52,7 @@ private Connection con;
         response.setContentType("text/html;charset=UTF-8");
         
         ServletContext sc = getServletContext();
-        request.setAttribute("Connection", con);
+        request.setAttribute("ConexBD", ConexBD);
         String accion=request.getParameter("a");
         RequestDispatcher rd;
         rd=sc.getRequestDispatcher("/"+accion);

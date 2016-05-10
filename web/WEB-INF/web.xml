@@ -16,6 +16,14 @@
         <servlet-name>Vote</servlet-name>
         <servlet-class>Controller.Vote</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>GetPoliticalParty</servlet-name>
+        <servlet-class>Controller.GetPoliticalParty</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Dispatcher</servlet-name>
+        <servlet-class>Controller.Dispatcher</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Register</servlet-name>
         <url-pattern>/Register</url-pattern>
@@ -32,13 +40,13 @@
         <servlet-name>Vote</servlet-name>
         <url-pattern>/Vote</url-pattern>
     </servlet-mapping>
-        <servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetPoliticalParty</servlet-name>
+        <url-pattern>/GetPoliticalParty</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
         <servlet-name>Dispatcher</servlet-name>
         <url-pattern>/Dispatcher</url-pattern>
-    </servlet-mapping>
-            <servlet-mapping>
-        <servlet-name>Connectiondb</servlet-name>
-        <url-pattern>/Connectiondb</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
