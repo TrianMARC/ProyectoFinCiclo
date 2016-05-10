@@ -37,7 +37,6 @@ public class GetPoliticalParty extends HttpServlet {
         
         
         Connectiondb con = (Connectiondb)request.getAttribute("ConexBD");
-
         ArrayList <Political_party> partys= con.GetPoliticalParty();
         
         
@@ -50,7 +49,7 @@ public class GetPoliticalParty extends HttpServlet {
             out.println("<title>Servlet GetPoliticalParty</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet GetPoliticalParty at " + partys.toString() + "</h1>");
+            out.println("<h1>Servlet GetPoliticalParty at " + partys.get(1).getName() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }

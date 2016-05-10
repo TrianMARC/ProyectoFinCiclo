@@ -21,7 +21,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Usuario
  */
-@WebServlet(name = "Dispatcher", urlPatterns = {"/Dispatcher"})
+
 public class Dispatcher extends HttpServlet {
 
 Connectiondb ConexBD;
