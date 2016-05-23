@@ -24,6 +24,14 @@
         <servlet-name>Dispatcher</servlet-name>
         <servlet-class>Controller.Dispatcher</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>LogIn</servlet-name>
+        <servlet-class>Controller.LogIn</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CheckNIF</servlet-name>
+        <servlet-class>Controller.CheckNIF</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Register</servlet-name>
         <url-pattern>/Register</url-pattern>
@@ -47,6 +55,14 @@
     <servlet-mapping>
         <servlet-name>Dispatcher</servlet-name>
         <url-pattern>/Dispatcher</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LogIn</servlet-name>
+        <url-pattern>/LogIn</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CheckNIF</servlet-name>
+        <url-pattern>/CheckNIF</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

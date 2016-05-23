@@ -19,7 +19,7 @@ body{
     background: #2d2d2d;
 }
 section.main{
-    background: white;
+   background: white;
     margin:0;
     display:inline-block;
     width:100%;
@@ -143,6 +143,11 @@ header>nav>span{
     .menu_bar {
 	display:none;
     }
+    section.main{
+         background: white url('../img/elections-background.jpg') no-repeat;
+        background-position-y: 30%;
+        min-height: 600px;
+    }
 }
 
 /* Login CSS */
@@ -153,7 +158,7 @@ div.login{
     color: #171717;
     width:100%;
 }
-div.login>form>label{
+div.login>form label{
     display:inline-block;
     width: 100%;
     margin:0;
@@ -164,12 +169,24 @@ div.login>form{
     padding:3em;
     padding-top:1em;
 }
-div.login>form>label>input[type="text"]{
+div.login>form label>input[type="text"], div.login>form label>input[type="password"]{
     display:inline-block;
     margin:0.3em;
     padding:4px;
 }
-div.login>form>.formButt{
+div.login>form>fieldset{
+    border: 2px solid rgba(54,94,127,0.6);
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+}
+div.login>form>fieldset>legend{
+    text-align:left;
+    opacity: 0.8;
+    font-weight:bold;
+    padding: 0 10px 0 10px;
+}
+.formButt{
     display: inline-block;
     border:none;
     margin:0;
@@ -184,7 +201,7 @@ div.login>form>.formButt{
     border-radius: 3px;
     margin-top: 1.6em;
 }
-div.login>form>.formButt:hover{
+.formButt:hover{
     background: white;
     color: #76c0ff;
 }
@@ -197,9 +214,8 @@ div.login>form>.formButt:hover{
         border: #A1A1A1 1px solid;
         width:40%;
         margin:auto;
-        margin-top: 20px;
+        margin-top: 220px;
         border-radius: 3px;
-        height:100%;
     }
     div.login>form>h2{
         margin-top:0;
@@ -224,4 +240,62 @@ footer{
     margin: 2% 0 0 0;
     
     } 
+}
+
+/* userpanel.jsp css */
+/* Dashboard */
+
+.dashboard{
+    list-style: none;
+    margin:auto;
+    text-align:center;
+    padding: 20px;
+}
+.dashboard a{
+    text-decoration:none;
+}
+.dashboard li{
+    text-align:center;
+    display:block;
+    width: 80%;
+    padding: 10px;
+    color: #365e7f;
+    border-radius: 5px;
+    background: white;
+    margin: 4px;
+    border: 1px solid #365e7f;
+}
+.dashboard li.enabled:hover{
+    background: #365e7f;
+    color: white;
+}
+.dashboard li.disabled{
+    opacity: 0.5;
+}
+.dashboard li span{
+    text-indent:-15px;
+}
+.section_title{
+    margin:0; 
+    padding:0;
+    text-indent: 20px;
+    opacity: 0.7;
+    font-size: 1.2em;
+    background: rgba(255,255,255,0.6);
+}
+@media only screen and (min-width: 768px){
+   .dashboard li{
+       width: 18%;
+       display:inline-block;
+    }
+}
+
+/* Signup css */
+#errorpassword{
+    display:none; 
+    color:red; 
+    font-size:0.8em; 
+    padding:7px; 
+    background: white;
+    border-radius: 3px;
 }

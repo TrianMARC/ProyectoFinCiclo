@@ -5,22 +5,19 @@
  */
 package Controller;
 
-import Model.Political_party;
+import Model.Voter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.Connection;
-import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
  *
- * @author Usuario
+ * @author victo
  */
-public class GetPoliticalParty extends HttpServlet {
+public class CheckNIF extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -33,11 +30,21 @@ public class GetPoliticalParty extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
+        response.setContentType("text/html;charset=UTF-8");
+        String nif = request.getParameter("nif");
+        Voter v = new Voter(nif);
         Connectiondb con = (Connectiondb)request.getAttribute("ConexBD");
-        ArrayList <Political_party> partys= con.GetPoliticalParty();
-        HttpSession session= request.getSession(true);
-        session.setAttribute("ArrayPartidos", partys);
+        boolean res = con.checkDNI(v);
+        if(res){
+            try (PrintWriter out = response.getWriter()) {
+                out.println("This NIF is already in use.");
+           }
+        }
+        else{
+            try (PrintWriter out = response.getWriter()) {
+                out.println("OK");
+           }
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
