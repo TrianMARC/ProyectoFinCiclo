@@ -18,23 +18,30 @@ public class Voter implements Serializable{
     private String Email;
     private String Name;
     private String Surname;
-    private String Adress;
+    private String Address;
     private String ZipCode;
     private String Password;
     private boolean Voted;
     private PropertyChangeSupport PropertySupport;
 
-    public Voter(String DNI, String Email, String Name, String Surname, String Adress, String ZipCode, String Password, boolean Voted) {
+    public Voter(String DNI, String Email, String Name, String Surname, String Address, String ZipCode, String Password, boolean Voted) {
         this.DNI = DNI;
         this.Email = Email;
         this.Name = Name;
         this.Surname = Surname;
-        this.Adress = Adress;
+        this.Address = Address;
         this.ZipCode = ZipCode;
         this.Password = Password;
         this.Voted = Voted;
     }
     
+    public Voter(String DNI, String password){
+        this.DNI = DNI;
+        this.Password = password;
+    }
+     public Voter(String DNI){
+        this.DNI = DNI;
+    }
     
     public Voter() {
     }
@@ -80,12 +87,12 @@ public class Voter implements Serializable{
         this.Surname = Surname;
     }
 
-    public String getAdress() {
-        return Adress;
+    public String getAddress() {
+        return Address;
     }
 
-    public void setAdress(String Adress) {
-        this.Adress = Adress;
+    public void setAddress(String Address) {
+        this.Address = Address;
     }
 
     public String getZipCode() {
