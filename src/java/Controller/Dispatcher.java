@@ -53,27 +53,10 @@ Connectiondb ConexBD;
         
         ServletContext sc = getServletContext();
         request.setAttribute("ConexBD", ConexBD);
-        String accion=request.getParameter("a");
+        String action=request.getParameter("action");
         RequestDispatcher rd;
-        rd=sc.getRequestDispatcher("/"+accion);
-
+        rd=sc.getRequestDispatcher("/"+action);
         rd.forward(request,response);
-        
-        
-        
-        
-//        try (PrintWriter out = response.getWriter()) {
-//            /* TODO output your page here. You may use following sample code. */
-//            out.println("<!DOCTYPE html>");
-//            out.println("<html>");
-//            out.println("<head>");
-//            out.println("<title>Servlet Dispatcher</title>");            
-//            out.println("</head>");
-//            out.println("<body>");
-//            out.println("<h1>Servlet Dispatcher at " + request.getContextPath() + "</h1>");
-//            out.println("</body>");
-//            out.println("</html>");
-//        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

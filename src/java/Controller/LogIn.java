@@ -5,11 +5,8 @@
  */
 package Controller;
 
-import Model.Political_party;
+import Model.Voter;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.sql.Connection;
-import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -18,9 +15,9 @@ import javax.servlet.http.HttpSession;
 
 /**
  *
- * @author Usuario
+ * @author victo
  */
-public class GetPoliticalParty extends HttpServlet {
+public class LogIn extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -33,11 +30,22 @@ public class GetPoliticalParty extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
+        response.setContentType("text/html;charset=UTF-8");
+        String nif = request.getParameter("nif");
+        String password = request.getParameter("password");
+        Voter v = new Voter(nif,password);
+        
         Connectiondb con = (Connectiondb)request.getAttribute("ConexBD");
-        ArrayList <Political_party> partys= con.GetPoliticalParty();
-        HttpSession session= request.getSession(true);
-        session.setAttribute("ArrayPartidos", partys);
+        boolean res = con.logIn(v);
+        HttpSession ses = request.getSession();
+        if(res){
+            ses.setAttribute("user", v);
+            response.sendRedirect("view/userpanel.jsp");
+        }
+        else{
+            ses.setAttribute("error","Incorrect nif/password.");
+            response.sendRedirect("view/error.jsp");
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
