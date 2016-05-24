@@ -3,17 +3,30 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/victo/Documents/NetBeansProjects/PFCJB/src/java/Controller/GetPoliticalParty.java</file>
+            <file>file:/C:/Users/victo/Documents/NetBeansProjects/PFCJB/web/view/vote.jsp</file>
             <file>file:/C:/Users/victo/Documents/NetBeansProjects/PFCJB/web/js/responsive.js</file>
-            <file>file:/C:/Users/victo/Documents/NetBeansProjects/PFCJB/src/java/model/Political_party.java</file>
-            <file>file:/C:/Users/victo/Documents/NetBeansProjects/PFCJB/src/java/controller/GetPoliticalParty.java</file>
+            <file>file:/C:/Users/victo/Documents/NetBeansProjects/PFCJB/src/java/Controller/Register.java</file>
+            <file>file:/C:/Users/victo/Documents/NetBeansProjects/PFCJB/web/view/main.jsp</file>
             <file>file:/C:/Users/victo/Documents/NetBeansProjects/PFCJB/web/view/userpanel.jsp</file>
-            <file>file:/C:/Users/victo/Documents/NetBeansProjects/PFCJB/src/java/controller/Dispatcher.java</file>
-            <file>file:/C:/Users/victo/Documents/NetBeansProjects/PFCJB/web/css/style.css</file>
             <file>file:/C:/Users/victo/Documents/NetBeansProjects/PFCJB/web/WEB-INF/web.xml</file>
             <file>file:/C:/Users/victo/Documents/NetBeansProjects/PFCJB/.git/config</file>
-            <file>file:/C:/Users/victo/Documents/NetBeansProjects/PFCJB/web/index.jsp</file>
             <file>file:/C:/Users/victo/Documents/NetBeansProjects/PFCJB/src/java/model/Voter.java</file>
-            <file>file:/C:/Users/victo/Documents/NetBeansProjects/PFCJB/src/java/controller/Connectiondb.java</file>
+            <file>file:/C:/Users/victo/Documents/NetBeansProjects/PFCJB/src/java/Controller/Connectiondb.java</file>
+            <file>file:/C:/Users/victo/Documents/NetBeansProjects/PFCJB/web/view/error.jsp</file>
+            <file>file:/C:/Users/victo/Documents/NetBeansProjects/PFCJB/web/view/header.jsp</file>
+            <file>file:/C:/Users/victo/Documents/NetBeansProjects/PFCJB/web/js/signup.js</file>
+            <file>file:/C:/Users/victo/Documents/NetBeansProjects/PFCJB/src/java/Controller/Vote.java</file>
+            <file>file:/C:/Users/victo/Documents/NetBeansProjects/PFCJB/src/java/model/Political_party.java</file>
+            <file>file:/C:/Users/victo/Documents/NetBeansProjects/PFCJB/web/view/footer.jsp</file>
+            <file>file:/C:/Users/victo/Documents/NetBeansProjects/PFCJB/web/view/signup.jsp</file>
+            <file>file:/C:/Users/victo/Documents/NetBeansProjects/PFCJB/src/java/Controller/CheckNIF.java</file>
+            <file>file:/C:/Users/victo/Documents/NetBeansProjects/PFCJB/web/css/style.css</file>
+            <file>file:/C:/Users/victo/Documents/NetBeansProjects/PFCJB/src/java/Controller/LogIn.java</file>
+            <file>file:/C:/Users/victo/Documents/NetBeansProjects/PFCJB/web/index.jsp</file>
+            <file>file:/C:/Users/victo/Documents/NetBeansProjects/PFCJB/web/css/icons.css</file>
+            <file>file:/C:/Users/victo/Documents/NetBeansProjects/PFCJB/src/java/Controller/List.java</file>
+            <file>file:/C:/Users/victo/Documents/NetBeansProjects/PFCJB/src/java/Controller/Dispatcher.java</file>
         </group>
     </open-files>
 </project-private>

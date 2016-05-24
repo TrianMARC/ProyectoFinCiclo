@@ -37,7 +37,8 @@ public class GetPoliticalParty extends HttpServlet {
         Connectiondb con = (Connectiondb)request.getAttribute("ConexBD");
         ArrayList <Political_party> partys= con.GetPoliticalParty();
         HttpSession session= request.getSession(true);
-        session.setAttribute("ArrayPartidos", partys);
+        session.setAttribute("politicalParties", partys);
+        response.sendRedirect("view/vote.jsp");
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
