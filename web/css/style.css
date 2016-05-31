@@ -26,6 +26,20 @@ section.main{
     padding-bottom: 0;
     
 }
+
+.message{
+   
+    font-weight:bold;
+    font-size: 0.8em;
+    color:green;
+    background:white;
+    padding: 5px;
+    border-radius: 3px;
+    width: 60%;
+    margin:10px auto;
+    text-align:center;
+    
+}
 /* Header CSS */
 header{
     background: #76c0ff;
@@ -299,3 +313,5 @@ footer{
     background: white;
     border-radius: 3px;
 }
+
+

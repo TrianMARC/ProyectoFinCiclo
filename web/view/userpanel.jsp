@@ -19,6 +19,11 @@
         <section class="main">
             <div class="login">
                 <h2 class="section_title">User dashboard</h2>
+                <%if(ses.getAttribute("callback")!=null){ %>
+                <div class="message"><%=ses.getAttribute("callback")%></div>
+                <%
+                    ses.removeAttribute("callback");
+                    }%>
                 <ul class="dashboard">
                     <% if(!user.isVoted()){ %>
                         <a href="../Dispatcher?action=GetPoliticalParty"><li class="enabled"><span class="flaticon-agreement"></span><strong>Vote</strong></li></a>

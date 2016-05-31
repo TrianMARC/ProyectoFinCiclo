@@ -11,7 +11,7 @@
 <!DOCTYPE html>
 <%
     //Opening new session
-    HttpSession ses = request.getSession(true);
+    HttpSession ses = request.getSession();
     if(ses.getAttribute("user") ==null){
         response.sendRedirect("../index.jsp");
     }else{
@@ -31,7 +31,7 @@
                         <div style="float:left;margin-left: 10px; margin-right: 10px;"><table>
                     <% } %>
                     <tr>
-                        <td><input type="radio" value="<%=p.getName() %>" name="politicalParty" /></td>
+                        <td><input type="radio" value="<%=items %>" name="politicalParty" /></td>
                         <td><img width="50" height="50" src="../img/parties/<%=p.getLogo()%>" title="<%=p.getName()%>" alt="<%=p.getName()%>" /></td>
                         <td><%=p.getName() %></td>
                     </tr>

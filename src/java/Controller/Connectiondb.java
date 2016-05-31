@@ -9,6 +9,8 @@ import Model.Political_party;
 import Model.Voter;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -116,6 +118,36 @@ public class Connectiondb {
          } catch (SQLException ex) {
             return false;
         }
+    }
+
+    public void vote(Voter user, Political_party p) {
+         try{
+            con.setAutoCommit(false);
+            PreparedStatement stmt = con.prepareStatement("UPDATE voter SET voted = ? WHERE nif = ? ");
+            stmt.setBoolean(1, user.isVoted());
+            stmt.setString(2, user.getDNI());
+            int rs = stmt.executeUpdate();
+            
+            PreparedStatement stmt2 = con.prepareStatement("UPDATE political_party SET NVOTES = ? WHERE NAME = ? ");
+            stmt2.setInt(1, p.getNvotes());
+            stmt2.setString(2, p.getName());
+            int rs2 = stmt2.executeUpdate();
+            
+            con.commit();
+         } catch (SQLException ex) {
+             try {
+                 con.rollback();
+             } catch (SQLException ex1) {
+                 Logger.getLogger(Connectiondb.class.getName()).log(Level.SEVERE, null, ex1);
+             }
+        }
+         finally{
+             try {
+                 con.setAutoCommit(true);
+             } catch (SQLException ex) {
+                 Logger.getLogger(Connectiondb.class.getName()).log(Level.SEVERE, null, ex);
+             }
+         }
     }
     
 }
