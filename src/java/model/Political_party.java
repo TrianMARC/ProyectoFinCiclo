@@ -31,7 +31,7 @@ public class Political_party implements Serializable, PropertyChangeListener {
     
     @Override
     public void propertyChange(PropertyChangeEvent pce) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       if((Boolean)pce.getNewValue()) setNvotes(getNvotes()+1);
         
     }
 
@@ -57,6 +57,11 @@ public class Political_party implements Serializable, PropertyChangeListener {
 
     public void setLogo(String Logo) {
         this.Logo = Logo;
+    }
+
+    @Override
+    public String toString() {
+        return "Political_party{" + "Name=" + Name + ", Nvotes=" + Nvotes + ", Logo=" + Logo + '}';
     }
     
     

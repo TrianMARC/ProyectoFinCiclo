@@ -33,14 +33,17 @@ public class Voter implements Serializable{
         this.ZipCode = ZipCode;
         this.Password = Password;
         this.Voted = Voted;
+        PropertySupport = new PropertyChangeSupport(this);
     }
     
     public Voter(String DNI, String password){
         this.DNI = DNI;
         this.Password = password;
+        PropertySupport = new PropertyChangeSupport(this);
     }
      public Voter(String DNI){
         this.DNI = DNI;
+        PropertySupport = new PropertyChangeSupport(this);
     }
     
     public Voter() {
@@ -128,6 +131,11 @@ public class Voter implements Serializable{
 
     public void setPropertySupport(PropertyChangeSupport PropertySupport) {
         this.PropertySupport = PropertySupport;
+    }
+
+    @Override
+    public String toString() {
+        return "Voter{" + "DNI=" + DNI + ", Email=" + Email + ", Name=" + Name + ", Surname=" + Surname + ", Address=" + Address + ", ZipCode=" + ZipCode + ", Password=" + Password + ", Voted=" + Voted + ", PropertySupport=" + PropertySupport + '}';
     }
     
     
