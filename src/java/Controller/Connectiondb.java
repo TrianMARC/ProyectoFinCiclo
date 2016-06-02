@@ -119,6 +119,22 @@ public class Connectiondb {
             return false;
         }
     }
+    
+    public boolean dismissVoter(Voter v){
+         try {
+             
+             int rs=0;
+             if(!v.isVoted()){
+             PreparedStatement stmt = con.prepareStatement("DELETE FROM voter WHERE NIF=?");
+             stmt.setString(1, v.getDNI());
+             rs = stmt.executeUpdate();
+                
+             }
+             return rs!=0;
+         } catch (SQLException ex) {
+             return false;
+         }
+    }
 
     public void vote(Voter user, Political_party p) {
          try{

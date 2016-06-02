@@ -29,7 +29,7 @@
                         <a href="../Dispatcher?action=GetPoliticalParty"><li class="enabled"><span class="flaticon-agreement"></span><strong>Vote</strong></li></a>
                         <li class="disabled"><span class="flaticon-network "></span><strong>Cense</strong></li>
                         <li class="disabled"><span class="flaticon-presentation"></span><strong>Results</strong></li>
-                        <a href="#" ><li class="enabled"><span class="flaticon-contract"></span><strong>Dismiss</strong></li></a>  
+                        <a href="../Dispatcher?action=Dismiss" ><li class="enabled"><span class="flaticon-contract"></span><strong>Dismiss</strong></li></a>  
                     <% }else{%>
                         <li class="disabled"><span class="flaticon-agreement"></span><strong>Vote</strong></li>
                         <a href="#"><li class="enabled"><span class="flaticon-network "></span><strong>Cense</strong></li></a>

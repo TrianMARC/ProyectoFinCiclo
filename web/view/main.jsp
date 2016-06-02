@@ -1,8 +1,17 @@
 <%@include file="header.jsp" %>
-
+<%
+    //Opening new session
+    HttpSession ses = request.getSession(true);
+    
+    %>
         <section class="main">
             <div class="login">
                 <h2 class="section_title">User Panel</h2>
+                <%if(ses.getAttribute("dismissed")!=null){ %>
+                <div class="message"><%=ses.getAttribute("dismissed")%></div>
+                <%
+                    ses.removeAttribute("dismissed");
+                    }%>
                 <form action="../Dispatcher" method="post" class="eform"> 
                     
                     <label>
