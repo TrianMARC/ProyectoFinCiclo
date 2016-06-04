@@ -75,6 +75,7 @@ public class Connectiondb {
                     v.setName(rs.getString("NAME"));
                     v.setSurname(rs.getString("SURNAME"));
                     v.setZipCode(rs.getString("ZIP CODE"));
+                    v.setVoted(rs.getBoolean("VOTED"));
                     ret = true;
                 }  
             }
@@ -163,6 +164,23 @@ public class Connectiondb {
              } catch (SQLException ex) {
                  Logger.getLogger(Connectiondb.class.getName()).log(Level.SEVERE, null, ex);
              }
+         }
+    }
+    
+    public ArrayList <Voter> cense(){
+         try {
+             ArrayList voters= new ArrayList();
+             PreparedStatement stmt = con.prepareStatement("SELECT * FROM voter");
+             ResultSet rs = stmt.executeQuery();
+            while(rs.next()){
+                voters.add(new Voter(rs.getString("NIF"),  rs.getString("EMAIL"), rs.getString("NAME"), rs.getString("SURNAME"), rs.getString("ADDRESS"), rs.getString("ZIP CODE"), rs.getBoolean("VOTED") ));
+            }
+            
+             
+             return voters;
+             
+         } catch (SQLException ex) {
+             return null;
          }
     }
     

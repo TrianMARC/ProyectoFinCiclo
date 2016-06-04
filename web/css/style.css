@@ -314,4 +314,73 @@ footer{
     border-radius: 3px;
 }
 
+//table
 
+.doctable {
+	margin:0px;padding:0px;
+	width:100%;
+	box-shadow: 10px 10px 5px #888888;
+	border:1px solid #ada6a6;
+
+}
+.doctable{
+    border-collapse: collapse;
+        border-spacing: 0;
+	width:100%;
+	height:100%;
+	margin:0px;padding:0px;
+}
+
+.doctable tr:hover td{
+	background-color: #365e7f;
+}
+.doctable tr:nth-child(odd){ background-color:white; }
+.doctable tr:nth-child(even)    { background-color:#76c0ff; }.doctable td{
+	vertical-align:middle;
+	
+	
+	border:1px solid #ada6a6;
+	border-width:0px 1px 1px 0px;
+	text-align:center;
+	padding:2px;
+	font-size:15px;
+	font-family:Oregon;
+	font-weight:bold;
+	color:#000000;
+}
+.doctable tr:last-child td{
+	border-width:0px 1px 0px 0px;
+}
+.doctable tr td:last-child{
+	border-width:0px 0px 1px 0px;
+}
+.doctable tr:last-child td:last-child{
+	border-width:0px 0px 0px 0px;
+}
+.doctable tr:first-child td{
+		background:-o-linear-gradient(bottom, #d31567 5%, #dd3ea0 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #d31567), color-stop(1, #dd3ea0) );
+	background:-moz-linear-gradient( center top, #d31567 5%, #dd3ea0 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#d31567", endColorstr="#dd3ea0");	background: -o-linear-gradient(top,#d31567,dd3ea0);
+
+	background-color:#d31567;
+	border:0px solid #ada6a6;
+	text-align:center;
+	border-width:0px 0px 1px 1px;
+	font-size:18px;
+	font-family:Verdana;
+	font-weight:bold;
+	color:#ffffff;
+}
+.doctable tr:first-child:hover td{
+	background:-o-linear-gradient(bottom, #d31567 5%, #dd3ea0 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #d31567), color-stop(1, #dd3ea0) );
+	background:-moz-linear-gradient( center top, #d31567 5%, #dd3ea0 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#d31567", endColorstr="#dd3ea0");	background: -o-linear-gradient(top,#d31567,dd3ea0);
+
+	background-color:#d31567;
+}
+.doctable tr:first-child td:first-child{
+	border-width:0px 0px 1px 0px;
+}
+.doctable tr:first-child td:last-child{
+	border-width:0px 0px 1px 1px;
+}
