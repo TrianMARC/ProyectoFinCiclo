@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Model;
+package model;
 
 import java.beans.*;
 import java.io.Serializable;
@@ -32,6 +32,16 @@ public class Voter implements Serializable{
         this.Address = Address;
         this.ZipCode = ZipCode;
         this.Password = Password;
+        PropertySupport = new PropertyChangeSupport(this);
+    }
+    
+    public Voter(String DNI, String Email, String Name, String Surname, String Address, String ZipCode, boolean Voted) {
+        this.DNI = DNI;
+        this.Email = Email;
+        this.Name = Name;
+        this.Surname = Surname;
+        this.Address = Address;
+        this.ZipCode = ZipCode;
         this.Voted = Voted;
         PropertySupport = new PropertyChangeSupport(this);
     }

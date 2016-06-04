@@ -5,7 +5,7 @@
  */
 package Controller;
 
-import Model.Political_party;
+import model.Political_party;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;

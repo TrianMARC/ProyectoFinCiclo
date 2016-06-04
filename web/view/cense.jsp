@@ -4,7 +4,7 @@
     Author     : Usuario
 --%>
 <%@page import="java.util.ArrayList"%>
-<%@page import="Model.Voter"%>
+<%@page import="model.Voter"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>

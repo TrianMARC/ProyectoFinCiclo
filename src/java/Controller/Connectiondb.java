@@ -5,8 +5,8 @@
  */
 package Controller;
 
-import Model.Political_party;
-import Model.Voter;
+import model.Political_party;
+import model.Voter;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.logging.Level;
