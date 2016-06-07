@@ -8,9 +8,10 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
-<%
-    //Opening new session
-    HttpSession ses = request.getSession();
+<%@include file="header.jsp" %>
+
+  <%  //Opening new session
+   
     if (ses.getAttribute("user") == null) {
         response.sendRedirect("../index.jsp");
     } else {
@@ -19,7 +20,7 @@
         int countpage=0;
         int nextpage=1;
 %>
-<%@include file="header.jsp" %>
+
 <section class="main">
     <div class="login">
         <h2 class="section_title">Registered users</h2>

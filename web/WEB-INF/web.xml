@@ -32,6 +32,10 @@
         <servlet-name>CheckNIF</servlet-name>
         <servlet-class>Controller.CheckNIF</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>LogOut</servlet-name>
+        <servlet-class>Controller.LogOut</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Register</servlet-name>
         <url-pattern>/Register</url-pattern>
@@ -63,6 +67,10 @@
     <servlet-mapping>
         <servlet-name>CheckNIF</servlet-name>
         <url-pattern>/CheckNIF</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LogOut</servlet-name>
+        <url-pattern>/LogOut</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

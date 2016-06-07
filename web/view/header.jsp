@@ -4,6 +4,7 @@
     Author     : victo
 --%>
 
+<%@page import="model.Voter"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -18,6 +19,9 @@
         <script type="text/javascript" src="../js/responsive.js"></script>
        
     </head>
+    <% HttpSession ses = request.getSession(true); 
+    Voter usercheck= (Voter)ses.getAttribute("user");
+    %>
     <body>
         <header>
             <h1>e-lections</h1>
@@ -30,6 +34,7 @@
                     <li><a href="#"><span class="icon-pushpin"></span> FAQ</a></li>
                     <li><a href="#"><span class="icon-books"></span> Documentation</a></li>
                     <li><a href="#"><span class="icon-users"></span> About Us</a></li>
+                    <% if(usercheck!=null){ %>  <li><a href="../Dispatcher?action=LogOut"><span class="icon-users"></span> Log Out</a></li> <% } %>
                 </ul>
                 <span>Welcome anonymous!</span>
             </nav>

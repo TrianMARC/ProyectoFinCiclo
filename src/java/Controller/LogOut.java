@@ -5,11 +5,8 @@
  */
 package Controller;
 
-import model.Political_party;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.Connection;
-import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -20,7 +17,7 @@ import javax.servlet.http.HttpSession;
  *
  * @author Usuario
  */
-public class GetPoliticalParty extends HttpServlet {
+public class LogOut extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -31,23 +28,16 @@ public class GetPoliticalParty extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
+    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
-        Connectiondb con = (Connectiondb) request.getAttribute("ConexBD");
-        ArrayList<Political_party> partys = con.GetPoliticalParty();
-        HttpSession session = request.getSession(true);
-        session.setAttribute("politicalParties", partys);
-        String type = request.getParameter("type");
+        response.setContentType("text/html;charset=UTF-8");
         
-        switch (type) {
-            case "vote":
-                response.sendRedirect("view/vote.jsp");
-                break;
-
-            case "results":
-                response.sendRedirect("view/graphic.jsp");
-        }
+        HttpSession ses = request.getSession();
+        ses.removeAttribute("user");
+        
+        response.sendRedirect("view/main.jsp");
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
