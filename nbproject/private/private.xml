@@ -2,29 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/ProyectoFin/src/java/Controller/BCrypt.java</file>
-            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/ProyectoFin/web/index.jsp</file>
-            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/ProyectoFin/web/view/vote.jsp</file>
-            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/ProyectoFin/web/view/cense.jsp</file>
-            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/ProyectoFin/web/WEB-INF/web.xml</file>
-            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/ProyectoFin/src/java/Controller/Dismiss.java</file>
-            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/ProyectoFin/src/java/Model/Voter.java</file>
-            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/ProyectoFin/web/view/userpanel.jsp</file>
-            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/ProyectoFin/src/java/Model/Political_party.java</file>
-            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/ProyectoFin/src/java/Controller/Register.java</file>
-            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/ProyectoFin/src/java/Controller/Connectiondb.java</file>
-            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/ProyectoFin/web/js/responsive.js</file>
-            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/ProyectoFin/src/java/Controller/GetPoliticalParty.java</file>
-            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/ProyectoFin/src/java/Controller/CheckNIF.java</file>
-            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/ProyectoFin/web/view/main.jsp</file>
-            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/ProyectoFin/src/java/Controller/Vote.java</file>
-            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/ProyectoFin/web/js/signup.js</file>
-            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/ProyectoFin/src/java/Controller/Dispatcher.java</file>
-            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/ProyectoFin/src/java/Controller/LogIn.java</file>
-            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/ProyectoFin/web/css/style.css</file>
-            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/ProyectoFin/src/java/Controller/List.java</file>
-            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/ProyectoFin/web/view/header.jsp</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
