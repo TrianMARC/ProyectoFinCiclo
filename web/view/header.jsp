@@ -35,6 +35,7 @@
                     <li><a href="#"><span class="icon-pushpin"></span> FAQ</a></li>
                     <li><a href="../javadoc/index.html"><span class="icon-books"></span> Documentation</a></li>
                     <li><a href="aboutus.jsp"><span class="icon-users"></span> About Us</a></li>
+
                     <% if(usercheck!=null){ %>  <li><a href="../Dispatcher?action=LogOut"><span class="icon-users"></span> Log Out</a></li> <% } %>
                 </ul>
                 <span>Welcome <%=welcome%>!</span>
