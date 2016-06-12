@@ -1,7 +1,7 @@
 <%@include file="header.jsp" %>
 <%
     //Opening new session
-    HttpSession ses = request.getSession(true);
+    
     
     %>
         <section class="main">

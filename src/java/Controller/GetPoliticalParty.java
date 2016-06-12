@@ -34,11 +34,20 @@ public class GetPoliticalParty extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        Connectiondb con = (Connectiondb)request.getAttribute("ConexBD");
-        ArrayList <Political_party> partys= con.GetPoliticalParty();
-        HttpSession session= request.getSession(true);
+        Connectiondb con = (Connectiondb) request.getAttribute("ConexBD");
+        ArrayList<Political_party> partys = con.GetPoliticalParty();
+        HttpSession session = request.getSession(true);
         session.setAttribute("politicalParties", partys);
-        response.sendRedirect("view/vote.jsp");
+        String type = request.getParameter("type");
+        
+        switch (type) {
+            case "vote":
+                response.sendRedirect("view/vote.jsp");
+                break;
+
+            case "results":
+                response.sendRedirect("view/graphic.jsp");
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

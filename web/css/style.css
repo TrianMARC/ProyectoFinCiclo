@@ -314,73 +314,42 @@ footer{
     border-radius: 3px;
 }
 
-//table
+/* Cense CSS */
 
-.doctable {
-	margin:0px;padding:0px;
-	width:100%;
-	box-shadow: 10px 10px 5px #888888;
-	border:1px solid #ada6a6;
-
-}
 .doctable{
-    border-collapse: collapse;
-        border-spacing: 0;
+        border-collapse: collapse;
 	width:100%;
 	height:100%;
-	margin:0px;padding:0px;
+	margin:0;
+        padding:0;
 }
 
 .doctable tr:hover td{
 	background-color: #365e7f;
+        color: white;
 }
-.doctable tr:nth-child(odd){ background-color:white; }
-.doctable tr:nth-child(even)    { background-color:#76c0ff; }.doctable td{
+.doctable td{
 	vertical-align:middle;
-	
-	
-	border:1px solid #ada6a6;
-	border-width:0px 1px 1px 0px;
 	text-align:center;
 	padding:2px;
-	font-size:15px;
-	font-family:Oregon;
+	font-size:12px;
 	font-weight:bold;
-	color:#000000;
+	
 }
-.doctable tr:last-child td{
-	border-width:0px 1px 0px 0px;
-}
-.doctable tr td:last-child{
-	border-width:0px 0px 1px 0px;
-}
-.doctable tr:last-child td:last-child{
-	border-width:0px 0px 0px 0px;
-}
-.doctable tr:first-child td{
-		background:-o-linear-gradient(bottom, #365e7f 5%, #052a66 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #365e7f), color-stop(1, #052a66) );
-	background:-moz-linear-gradient( center top, #365e7f 5%, #052a66 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#365e7f", endColorstr="#052a66");	background: -o-linear-gradient(top,#365e7f,#052a66);
+.doctable tr:nth-child(odd){ background-color:white; }
+.doctable tr:nth-child(even)    { background-color: #E0F8F7; }
 
-	background-color:#d31567;
-	border:0px solid #ada6a6;
+
+.doctable thead th{
+	background-color: #365e7f;
 	text-align:center;
-	border-width:0px 0px 1px 1px;
-	font-size:18px;
+	font-size:16px;
 	font-family:Verdana;
 	font-weight:bold;
 	color:#ffffff;
 }
-.doctable tr:first-child:hover td{
-	background:-o-linear-gradient(bottom, #365e7f 5%, #052a66 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #365e7f), color-stop(1, #052a66) );
-	background:-moz-linear-gradient( center top, #365e7f 5%, #052a66 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#365e7f", endColorstr="#052a66");	background: -o-linear-gradient(top,#365e7f,#052a66);
-
-	background-color:#365e7f;
-}
-.doctable tr:first-child td:first-child{
-	border-width:0px 0px 1px 0px;
-}
-.doctable tr:first-child td:last-child{
-	border-width:0px 0px 1px 1px;
+/* Responsive CSS for Cense table */
+.td-mail{ display: none;}
+@media only screen and (min-width: 768px){
+   .td-mail{ display: table-cell;}
 }

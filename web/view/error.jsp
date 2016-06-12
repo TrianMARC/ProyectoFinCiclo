@@ -6,9 +6,10 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<% HttpSession ses = request.getSession();
-String error = (String)ses.getAttribute("error"); %>
 <%@include file="header.jsp" %>
+<% 
+String error = (String)ses.getAttribute("error"); %>
+
         <section class="main">
             <div class="login">
                 <h2 class="section_title" style="color:red;">ERROR!</h2>

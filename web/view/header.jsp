@@ -4,6 +4,7 @@
     Author     : victo
 --%>
 
+<%@page import="model.Voter"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -18,6 +19,10 @@
         <script type="text/javascript" src="../js/responsive.js"></script>
        
     </head>
+    <% HttpSession ses = request.getSession(true); 
+    Voter usercheck= (Voter)ses.getAttribute("user");
+    String welcome = usercheck != null ? usercheck.getName()+" "+usercheck.getSurname() : "anonymous";
+    %>
     <body>
         <header>
             <h1>e-lections</h1>
@@ -28,9 +33,10 @@
                 <ul>
                     <li><a href="../index.jsp"><span class="icon-home"></span> Home</a></li>
                     <li><a href="#"><span class="icon-pushpin"></span> FAQ</a></li>
-                    <li><a href="#"><span class="icon-books"></span> Documentation</a></li>
-                    <li><a href="#"><span class="icon-users"></span> About Us</a></li>
+                    <li><a href="../javadoc/index.html"><span class="icon-books"></span> Documentation</a></li>
+                    <li><a href="aboutus.jsp"><span class="icon-users"></span> About Us</a></li>
+                    <% if(usercheck!=null){ %>  <li><a href="../Dispatcher?action=LogOut"><span class="icon-users"></span> Log Out</a></li> <% } %>
                 </ul>
-                <span>Welcome anonymous!</span>
+                <span>Welcome <%=welcome%>!</span>
             </nav>
         </header>

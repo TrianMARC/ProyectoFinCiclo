@@ -9,8 +9,8 @@ import java.beans.*;
 import java.io.Serializable;
 
 /**
- *
- * @author Usuario
+ *Class Voter
+ * Class to define the bean object
  */
 public class Voter implements Serializable{
 
@@ -24,6 +24,18 @@ public class Voter implements Serializable{
     private boolean Voted;
     private PropertyChangeSupport PropertySupport;
 
+    /**
+     * Main Constructor
+     * The propertychangesupport is initialited 
+     * @param DNI String ID number
+     * @param Email 
+     * @param Name
+     * @param Surname
+     * @param Address
+     * @param ZipCode
+     * @param Password
+     * @param Voted 
+     */
     public Voter(String DNI, String Email, String Name, String Surname, String Address, String ZipCode, String Password, boolean Voted) {
         this.DNI = DNI;
         this.Email = Email;
@@ -127,7 +139,11 @@ public class Voter implements Serializable{
     public boolean isVoted() {
         return Voted;
     }
-
+    
+    /**
+     * Method that launch the firePropertyChange method to call the listener
+     * @param Voted boolean, indicates if the user has voted or not.
+     */
     public void setVoted(boolean Voted) {
         boolean oldvote= this.Voted;
         this.Voted = Voted;

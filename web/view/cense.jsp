@@ -8,9 +8,10 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
-<%
-    //Opening new session
-    HttpSession ses = request.getSession();
+<%@include file="header.jsp" %>
+
+  <%  //Opening new session
+   
     if (ses.getAttribute("user") == null) {
         response.sendRedirect("../index.jsp");
     } else {
@@ -19,19 +20,19 @@
         int countpage=0;
         int nextpage=1;
 %>
-<%@include file="header.jsp" %>
+
 <section class="main">
     <div class="login">
         <h2 class="section_title">Registered users</h2>
 
         <table class="doctable">
-            <tr>
-                <td>DNI</td>
-                <td>Name</td>
-                <td>Surname</td>
-                <td>E-mail</td>
-                <td>Voted</td>
-            </tr>
+            <thead>
+                <th>DNI</th>
+                <th>Name</th>
+                <th>Surname</th>
+                <th class="td-mail">E-mail</th>
+                <th>Voted</th>
+            </thead>
             
             
             <% for(Voter v : voters){ %>
@@ -40,7 +41,7 @@
                 <td><%=v.getDNI()  %></td>
                 <td><%=v.getName()  %></td>
                 <td><%=v.getSurname()  %></td>
-                <td><%=v.getEmail()  %></td>
+                <td class="td-mail"><%=v.getEmail()  %></td>
                 <td><% if(v.isVoted()){ %> <input type="checkbox" checked disabled> <% }else{ %><input type="checkbox" disabled> <% } %></td>
                 
             </tr>

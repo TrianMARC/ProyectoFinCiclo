@@ -13,8 +13,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
- * @author Usuario
+ * Class Connectiondb
+ *Class that allows the connection with the database and contains all the methods to access the data
  */
 public class Connectiondb {
      private static Connectiondb UnicaConexion=null; 
@@ -37,7 +37,11 @@ public class Connectiondb {
     public void Destroy() throws SQLException{
            con.close();
     }
-    
+    /**
+     * GetPoliticalParty
+     * Method that returns the arraylist of political parties
+     * @return ArrayList
+     */
     public ArrayList <Political_party> GetPoliticalParty(){
         ArrayList <Political_party> partys= new ArrayList();
         
@@ -87,7 +91,12 @@ public class Connectiondb {
         }
         
     }
-    
+    /**
+     * checkDNI
+     * Method that checks if the DNI is in the database or not during the registration.
+     * @param v Voter object only with the DNI setted
+     * @return boolean
+     */
     public boolean checkDNI(Voter v){
          boolean ret = false;
 
@@ -102,7 +111,13 @@ public class Connectiondb {
         }
          return ret;
     }
-
+    
+    /**
+     * addVoter
+     * Save a Voter object in the database
+     * @param v Voter to be saved
+     * @return boolean, returns true if the voter is successfully inserted
+     */
     public boolean addVoter(Voter v) {
        try{            
             PreparedStatement stmt = con.prepareStatement("INSERT INTO voter VALUES(null,?,?,?,?,?,?,?,?)");
@@ -121,6 +136,12 @@ public class Connectiondb {
         }
     }
     
+    /**
+     * dismissVoter
+     * Remove a Voter object from the database
+     * @param v Voter to be removed
+     * @return boolean
+     */
     public boolean dismissVoter(Voter v){
          try {
              
@@ -137,6 +158,12 @@ public class Connectiondb {
          }
     }
 
+    /**
+     * vote
+     * Method to update the number of votes in a political party and the voted property from a Voter object
+     * @param user Voter wants vote
+     * @param p Political_party voted
+     */
     public void vote(Voter user, Political_party p) {
          try{
             con.setAutoCommit(false);
@@ -166,7 +193,11 @@ public class Connectiondb {
              }
          }
     }
-    
+    /**
+     * cense
+     * Method which returns an ArrayList of registered voters
+     * @return ArrayList
+     */
     public ArrayList <Voter> cense(){
          try {
              ArrayList voters= new ArrayList();

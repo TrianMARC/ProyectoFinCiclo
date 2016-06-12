@@ -9,18 +9,26 @@ import java.beans.*;
 import java.io.Serializable;
 
 /**
- *
- * @author Usuario
+ * Class Political_Party
+ * 
+ * Class to define the javabean object
  */
 public class Political_party implements Serializable, PropertyChangeListener {
 
+    
     private String Name;
     private int Nvotes;
     private String Logo;
     
     public Political_party() {
     }
-
+    
+    /**
+     * Full Constructor
+     * @param Name political_party name
+     * @param Nvotes number of votes adquired
+     * @param Logo logo image url
+     */
     public Political_party(String Name, int Nvotes, String Logo){
         this.Name=Name;
         this.Nvotes=Nvotes;
@@ -28,7 +36,10 @@ public class Political_party implements Serializable, PropertyChangeListener {
         
     }
     
-    
+    /**
+     * Method to update the number of votes when a voter call it
+     * @param pce  caller event
+     */
     @Override
     public void propertyChange(PropertyChangeEvent pce) {
        if((Boolean)pce.getNewValue()) setNvotes(getNvotes()+1);

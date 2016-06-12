@@ -9,16 +9,17 @@
 <%@page import="model.Voter"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<%@include file="header.jsp" %>
 <%
     //Opening new session
-    HttpSession ses = request.getSession();
+    
     if(ses.getAttribute("user") ==null){
         response.sendRedirect("../index.jsp");
     }else{
         Voter user = (Voter)ses.getAttribute("user");
         ArrayList<Political_party> politicalParties = (ArrayList<Political_party>) ses.getAttribute("politicalParties");
 %>
-<%@include file="header.jsp" %>
+
         <section class="main">
             <div class="login">
                 <h2 class="section_title">Vote one political party</h2>
